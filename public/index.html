@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="lessons.css">
+<link rel="stylesheet" href="mobile.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 </head>
@@ -51,6 +52,11 @@
 </section>
 
 <div id="app" hidden>
+  <header id="mbar">
+    <button id="mbtn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <strong>AgriVerse <span>AI</span></strong>
+  </header>
+  <div id="mscrim"></div>
   <aside>
     <h1>AgriVerse <span>AI</span></h1>
     <p id="who"></p>
@@ -72,3 +78,6 @@
 <script src="lang-om.js"></script>
 <script src="i18n.js"></script>
 <script src="pwa.js"></script>
+<script src="mobile.js"></script>
+</body>
+</html>

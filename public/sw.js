@@ -1,6 +1,6 @@
 /* AgriVerse AI service worker — offline mode.
    Bump VERSION whenever you want every device to throw away its old cache. */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL = 'agriverse-shell-' + VERSION;   // our own files
 const LIBS  = 'agriverse-libs-' + VERSION;    // Three.js, Leaflet, fonts, background photo
 const TILES = 'agriverse-tiles-' + VERSION;   // map tiles the farmer has looked at
@@ -10,7 +10,7 @@ const ALL = [SHELL, LIBS, TILES, API];
 const SHELL_FILES = [
   '/', '/index.html', '/style.css', '/lessons.css',
   '/script.js', '/knowledge.js', '/diseases.js', '/investor.js', '/lessons.js',
-  '/lang-am.js', '/lang-ti.js', '/lang-ti-content.js', '/lang-om.js', '/i18n.js', '/pwa.js',
+  '/lang-am.js', '/lang-ti.js', '/lang-ti-content.js', '/lang-om.js', '/i18n.js', '/pwa.js', '/mobile.css', '/mobile.js',
   '/manifest.webmanifest',
   '/icons/icon-192.png', '/icons/icon-512.png', '/icons/apple-touch-icon.png', '/icons/favicon-32.png'
 ];
