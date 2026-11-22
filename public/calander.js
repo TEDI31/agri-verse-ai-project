@@ -1,0 +1,1 @@
+// Planting calendar code now lives in script.js. This file is intentionally empty.

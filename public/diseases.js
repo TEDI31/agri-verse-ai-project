@@ -1,0 +1,98 @@
+// More plant diseases and pests for disease detection.
+// crop = crop name ("Any" matches all crops), sym = symptom words farmers may type, fix = advice.
+DIS.push(
+  /* Wheat and barley */
+  { crop: 'Wheat', name: 'Yellow (stripe) rust', sym: ['yellow', 'stripe', 'stripes', 'powder', 'streaks', 'rust'], fix: 'Spray a registered fungicide (e.g. tebuconazole) at first stripes. Use resistant varieties, sow on time and destroy volunteer wheat.' },
+  { crop: 'Wheat', name: 'Powdery mildew', sym: ['white', 'powder', 'powdery', 'grey', 'felt'], fix: 'Improve spacing and airflow, avoid too much nitrogen and spray sulphur or a registered fungicide.' },
+  { crop: 'Wheat', name: 'Loose smut', sym: ['black', 'smut', 'soot', 'sooty', 'heads'], fix: 'Use certified, treated seed. Remove and burn smutted heads before the spores spread.' },
+  { crop: 'Barley', name: 'Barley scald', sym: ['scald', 'blotch', 'water', 'greyish', 'bluish', 'leaf blotch'], fix: 'Rotate crops, use clean seed and resistant varieties, and bury residue after harvest.' },
+  { crop: 'Barley', name: 'Net blotch', sym: ['net', 'brown', 'streaks', 'lines', 'netted'], fix: 'Use resistant varieties, treat seed and rotate with pulses. Spray fungicide if severe.' },
+
+  /* Maize */
+  { crop: 'Maize', name: 'Maize smut', sym: ['gall', 'galls', 'swollen', 'grey', 'tumour', 'tumor', 'puffball', 'silvery'], fix: 'Remove and bury galls before they burst. Avoid wounding plants and rotate crops. Smut galls are edible only when young, but burn old ones.' },
+  { crop: 'Maize', name: 'Maize stalk borer', sym: ['stalk', 'tunnel', 'borer', 'dead heart', 'broken', 'bore', 'holes in stem'], fix: 'Remove and burn old stalks after harvest, plant early, and apply a registered insecticide into the whorl. Intercrop with desmodium.' },
+  { crop: 'Maize', name: 'Northern leaf blight', sym: ['cigar', 'long', 'spots', 'grey', 'green', 'lesion', 'elliptical'], fix: 'Plant resistant hybrids, rotate, and bury residue. Fungicide helps in wet seasons.' },
+  { crop: 'Maize', name: 'Maize streak virus', sym: ['streak', 'streaks', 'yellow lines', 'stunted', 'lines', 'virus'], fix: 'No cure. Pull and burn infected plants, control leafhoppers and use streak-resistant varieties. Plant early.' },
+  { crop: 'Maize', name: 'Ear rot / aflatoxin mould', sym: ['mould', 'mold', 'pink', 'green', 'ear', 'cob', 'rot', 'fungus'], fix: 'Harvest on time, dry cobs fast to 13% moisture, discard mouldy cobs and never feed them to animals.' },
+
+  /* Teff, sorghum, rice */
+  { crop: 'Teff', name: 'Teff head smut', sym: ['black', 'smut', 'head', 'heads', 'soot'], fix: 'Use clean seed, rotate crops and remove infected heads early.' },
+  { crop: 'Teff', name: 'Teff leaf spot / damping off', sym: ['seedling', 'seedlings', 'rot', 'damping', 'collapse', 'spots'], fix: 'Avoid waterlogged seedbeds, sow on well-drained soil, use clean seed and rotate crops.' },
+  { crop: 'Sorghum', name: 'Sorghum anthracnose', sym: ['red', 'spots', 'purple', 'lesion', 'stalk', 'red rot', 'tan'], fix: 'Rotate crops, use resistant varieties and clean seed. Destroy crop residues.' },
+  { crop: 'Sorghum', name: 'Head smut / grain smut', sym: ['smut', 'black', 'head', 'heads', 'soot', 'sac'], fix: 'Use treated seed, remove smutted heads in a bag before they burst and rotate crops.' },
+  { crop: 'Sorghum', name: 'Striga (witchweed)', sym: ['striga', 'pink flowers', 'purple flowers', 'witchweed', 'parasite', 'stunted', 'wilting'], fix: 'Hand-pull before seeding, rotate with legumes, add manure and use resistant varieties.' },
+  { crop: 'Rice', name: 'Rice blast', sym: ['diamond', 'blast', 'grey center', 'spindle', 'neck', 'brown spots', 'lesions'], fix: 'Use resistant varieties, avoid too much nitrogen, drain and refill water and spray tricyclazole at early signs.' },
+  { crop: 'Rice', name: 'Bacterial leaf blight', sym: ['yellow', 'wavy', 'tips', 'wilting', 'blight', 'dry'], fix: 'Use clean seed and resistant varieties, balance fertilizer and drain fields during outbreaks.' },
+  { crop: 'Rice', name: 'Brown spot', sym: ['brown', 'oval', 'spots', 'seed', 'dots'], fix: 'Feed with balanced fertilizer (potassium and nitrogen), use clean seed and treat seed.' },
+
+  /* Vegetables */
+  { crop: 'Tomato', name: 'Tomato leaf curl virus', sym: ['curl', 'curled', 'curling', 'yellow', 'stunted', 'whitefly', 'small leaves', 'crinkled'], fix: 'Control whiteflies with neem, soap water and traps. Pull and burn infected plants. Use resistant varieties and nets in the nursery.' },
+  { crop: 'Tomato', name: 'Fusarium wilt', sym: ['wilt', 'yellow', 'one side', 'lower leaves', 'brown vessels', 'wilting'], fix: 'Rotate (3+ years), use resistant varieties and grafted seedlings, and never plant in infected soil.' },
+  { crop: 'Tomato', name: 'Blossom end rot', sym: ['bottom', 'black', 'end', 'sunken', 'fruit', 'blossom', 'leathery'], fix: 'Water regularly and evenly, add lime or calcium, mulch to keep moisture steady and avoid excess nitrogen.' },
+  { crop: 'Tomato', name: 'Tomato leaf miner (Tuta absoluta)', sym: ['tunnels', 'mines', 'leaf miner', 'white trails', 'galleries', 'tuta', 'fruit holes', 'blotches'], fix: 'Use pheromone traps, remove infested leaves, spray Bt or a registered insecticide, and clean the field after harvest.' },
+  { crop: 'Tomato', name: 'Fruit worm (bollworm)', sym: ['fruit', 'holes', 'caterpillar', 'worm', 'bore', 'bored'], fix: 'Hand-pick caterpillars, destroy damaged fruit and spray Bt or neem early in the morning.' },
+  { crop: 'Potato', name: 'Early blight', sym: ['rings', 'target', 'concentric', 'brown', 'spots', 'lower leaves'], fix: 'Rotate crops, use certified seed tubers and spray mancozeb or copper at first signs.' },
+  { crop: 'Potato', name: 'Common scab', sym: ['rough', 'corky', 'scab', 'patches', 'tuber', 'tubers', 'skin'], fix: 'Avoid liming, keep soil moist during tuber formation and rotate with cereals. Tubers are safe to eat after peeling.' },
+  { crop: 'Potato', name: 'Potato tuber moth', sym: ['tunnels', 'tuber', 'mines', 'worm', 'holes', 'moth'], fix: 'Hill soil well so tubers are covered, harvest on time, store in cool dry rooms and destroy infested tubers.' },
+  { crop: 'Onion', name: 'Purple blotch', sym: ['purple', 'blotch', 'white', 'sunken', 'tip', 'lesions'], fix: 'Spray mancozeb, avoid overhead watering, rotate with non-onion crops and keep fields clean.' },
+  { crop: 'Onion', name: 'Thrips', sym: ['silver', 'silvery', 'streaks', 'patches', 'white', 'thrips', 'tips'], fix: 'Spray neem or soap water, use blue sticky traps and keep plants well watered. Remove weeds around fields.' },
+  { crop: 'Cabbage', name: 'Black rot', sym: ['v-shaped', 'yellow', 'v shaped', 'black veins', 'rot', 'margins'], fix: 'Use clean seed (hot-water treated), rotate with non-cabbage crops for 2–3 years and remove infected plants.' },
+  { crop: 'Cabbage', name: 'Diamondback moth', sym: ['holes', 'window', 'chewed', 'caterpillar', 'leaves', 'green worms', 'small worms'], fix: 'Spray Bt or neem weekly, inspect under leaves, and intercrop with tomato or onion to confuse the moth.' },
+  { crop: 'Cabbage', name: 'Clubroot', sym: ['club', 'swollen', 'roots', 'wilt', 'stunted', 'galls'], fix: 'Lime acidic soil to pH 7+, rotate for 5+ years and avoid moving infected soil. Use resistant varieties.' },
+  { crop: 'Carrot', name: 'Carrot leaf blight', sym: ['brown', 'spots', 'blight', 'yellow edges', 'leaf'], fix: 'Use clean seed, rotate crops, keep leaves dry and spray copper fungicide.' },
+  { crop: 'Pepper', name: 'Pepper anthracnose', sym: ['sunken', 'dark', 'spots', 'fruit', 'pods', 'circular'], fix: 'Use clean seed, rotate, avoid overhead watering and spray copper fungicide. Remove infected pods.' },
+  { crop: 'Pepper', name: 'Pepper mosaic virus', sym: ['mosaic', 'mottled', 'light green', 'distorted', 'small fruit', 'curl'], fix: 'No cure. Control aphids and whiteflies, remove infected plants and disinfect hands and tools.' },
+  { crop: 'Garlic', name: 'White rot', sym: ['white', 'fluffy', 'mould', 'bulb', 'yellow', 'collapse', 'black dots'], fix: 'Use clean cloves, rotate for 5+ years and avoid infected fields. There is no cure.' },
+  { crop: 'Sweet potato', name: 'Sweet potato weevil', sym: ['tunnel', 'holes', 'tuber', 'bitter', 'weevil', 'cracks'], fix: 'Ridge soil over tubers, rotate, use clean vines and harvest on time. Destroy infested tubers.' },
+  { crop: 'Cassava', name: 'Cassava mosaic disease', sym: ['mosaic', 'yellow', 'twisted', 'distorted', 'patches', 'small leaves'], fix: 'Plant clean, resistant cuttings, remove infected plants and control whiteflies.' },
+  { crop: 'Cassava', name: 'Cassava brown streak', sym: ['brown', 'streak', 'root', 'rot', 'dry', 'yellow veins'], fix: 'Use clean resistant cuttings, rogue (remove) infected plants and harvest on time.' },
+
+  /* Pulses and oil crops */
+  { crop: 'Beans', name: 'Angular leaf spot', sym: ['angular', 'spots', 'brown', 'veins', 'holes'], fix: 'Use clean seed, rotate crops and avoid working in wet fields. Spray copper if severe.' },
+  { crop: 'Beans', name: 'Bean fly (stem maggot)', sym: ['seedling', 'wilt', 'swollen', 'stem', 'maggot', 'dying', 'base'], fix: 'Plant early, earth up stems, use treated seed and mulch to help plants make new roots.' },
+  { crop: 'Beans', name: 'Common bacterial blight', sym: ['water-soaked', 'yellow border', 'blight', 'brown', 'pods', 'spots'], fix: 'Use clean certified seed, rotate and avoid handling wet plants.' },
+  { crop: 'Chickpea', name: 'Fusarium wilt of chickpea', sym: ['wilt', 'drooping', 'yellow', 'dry', 'sudden'], fix: 'Use resistant varieties, rotate and avoid planting on wilt-infested fields. Use clean seed.' },
+  { crop: 'Faba bean', name: 'Chocolate spot', sym: ['chocolate', 'brown', 'spots', 'dark', 'blotches', 'black stem'], fix: 'Sow early, avoid dense stands, use resistant varieties and spray fungicide at early signs.' },
+  { crop: 'Groundnut', name: 'Groundnut leaf spot and rust', sym: ['spots', 'brown', 'black', 'rust', 'orange', 'leaf drop'], fix: 'Rotate, use resistant varieties and spray fungicide. Remove residue after harvest.' },
+  { crop: 'Soybean', name: 'Soybean rust', sym: ['rust', 'tan', 'brown', 'pustule', 'small', 'underside'], fix: 'Plant early, use resistant varieties and spray fungicide at first signs.' },
+  { crop: 'Sunflower', name: 'Sunflower downy mildew', sym: ['white', 'downy', 'stunted', 'yellow', 'underside', 'mildew'], fix: 'Use treated seed, resistant hybrids and rotate for 3+ years. Do not plant in waterlogged fields.' },
+  { crop: 'Sesame', name: 'Sesame phyllody', sym: ['green', 'flowers', 'leaf-like', 'leafy', 'no pods', 'phyllody', 'deformed'], fix: 'Control leafhoppers, remove infected plants early and plant at recommended dates.' },
+  { crop: 'Cotton', name: 'American bollworm', sym: ['bolls', 'holes', 'caterpillar', 'worm', 'squares', 'drop'], fix: 'Scout weekly, hand-pick, use pheromone traps and spray registered insecticides or neem at egg-laying.' },
+
+  /* Fruit, coffee, enset */
+  { crop: 'Coffee', name: 'Coffee wilt disease', sym: ['wilt', 'wilting', 'yellow', 'drooping', 'dieback', 'dry', 'dying'], fix: 'Uproot and burn infected trees, disinfect tools, avoid wounding the trunk and plant resistant varieties.' },
+  { crop: 'Coffee', name: 'Coffee berry borer', sym: ['hole', 'berry', 'berries', 'tiny', 'holes in cherry', 'borer', 'dropping'], fix: 'Pick all ripe and fallen berries, process cherries quickly, use traps and keep the farm clean.' },
+  { crop: 'Coffee', name: 'Coffee leaf miner', sym: ['miner', 'tunnels', 'blotch', 'brown patches', 'leaf', 'mines'], fix: 'Maintain shade trees, avoid very dry stress and use registered insecticides only if severe.' },
+  { crop: 'Banana', name: 'Panama wilt (Fusarium)', sym: ['yellow', 'older leaves', 'wilt', 'collapse', 'split stem', 'brown', 'skirt'], fix: 'Use clean tissue-culture plants, remove infected plants, avoid moving soil and do not replant in that spot.' },
+  { crop: 'Banana', name: 'Black Sigatoka', sym: ['black', 'streaks', 'leaf', 'brown', 'spots', 'dried leaves'], fix: 'Remove infected leaves, space plants well and spray fungicide in the rainy season.' },
+  { crop: 'Banana', name: 'Banana bunchy top / Xanthomonas wilt', sym: ['bunch', 'bunchy', 'short', 'narrow', 'stunted', 'male bud', 'yellow fruit', 'ooze'], fix: 'Remove infected plants, cut male buds, disinfect tools with fire or bleach, and use clean planting material.' },
+  { crop: 'Enset', name: 'Enset bacterial wilt (Xanthomonas)', sym: ['yellow', 'wilting', 'collapse', 'leaves', 'ooze', 'bacterial', 'wilt', 'midrib'], fix: 'Uproot and bury infected plants, disinfect tools between plants and use clean suckers. Do not feed to animals.' },
+  { crop: 'Avocado', name: 'Avocado root rot', sym: ['wilt', 'leaves', 'yellow', 'dying', 'small leaves', 'root', 'dieback'], fix: 'Plant on raised mounds with good drainage, avoid overwatering and use resistant rootstock. Remove dead trees.' },
+  { crop: 'Avocado', name: 'Avocado anthracnose', sym: ['dark', 'spots', 'fruit', 'sunken', 'black', 'rot', 'ripening'], fix: 'Prune for airflow, spray copper during flowering and avoid bruising fruit.' },
+  { crop: 'Mango', name: 'Mango powdery mildew', sym: ['white', 'powder', 'flowers', 'drop', 'flower', 'blossom'], fix: 'Spray sulphur at flowering, prune for air flow and avoid late irrigation.' },
+  { crop: 'Mango', name: 'Mango anthracnose', sym: ['black', 'spots', 'fruit', 'blossom', 'sunken', 'dark'], fix: 'Prune, spray copper at flowering, and handle fruit gently after harvest.' },
+  { crop: 'Papaya', name: 'Papaya ringspot virus', sym: ['ring', 'rings', 'mosaic', 'oily', 'streaks', 'distorted', 'stunted'], fix: 'Remove infected plants, control aphids, plant resistant types and keep new plants far from old orchards.' },
+
+  /* Livestock-related */
+  { crop: 'Any', name: 'Spider mite damage', sym: ['mite', 'mites', 'speckled', 'webbing', 'fine web', 'dusty', 'bronze', 'stipple'], fix: 'Spray soapy water or neem under leaves, increase humidity, avoid dusty roads near fields and encourage natural enemies.' },
+  { crop: 'Any', name: 'Whitefly infestation', sym: ['whitefly', 'white insects', 'cloud', 'sticky', 'sooty', 'honeydew', 'flies'], fix: 'Use yellow sticky traps, spray neem or soap water, remove infested leaves and screen the nursery.' },
+  { crop: 'Any', name: 'Powdery mildew', sym: ['white', 'powder', 'powdery', 'flour', 'dust', 'dusty', 'mildew'], fix: 'Improve airflow and spacing, water the soil not the leaves, and spray sulphur, neem or a registered fungicide.' },
+  { crop: 'Any', name: 'Downy mildew', sym: ['yellow patches', 'downy', 'purple', 'grey fuzz', 'fuzzy', 'underside', 'angular'], fix: 'Avoid overhead watering and crowded plants, remove infected leaves, and spray a protectant (copper or mancozeb) in wet weather.' },
+  { crop: 'Any', name: 'Root rot', sym: ['wilt', 'yellow', 'roots', 'rot', 'brown roots', 'waterlogged', 'mushy', 'foul', 'smell', 'collapse'], fix: 'Improve drainage, avoid overwatering, plant on ridges and rotate. Remove dying plants and do not replant the same crop there.' },
+  { crop: 'Any', name: 'Damping-off (seedling collapse)', sym: ['seedling', 'seedlings', 'collapse', 'thin stem', 'fall over', 'damping', 'base rot', 'pinched'], fix: 'Use clean seedbeds and sterile soil, sow thinly, water lightly in the morning and ensure drainage.' },
+  { crop: 'Any', name: 'Nematodes (root-knot)', sym: ['knots', 'galls', 'swollen roots', 'stunted', 'wilting', 'knotty', 'root'], fix: 'Rotate with cereals or marigold, solarize soil, add compost and use resistant varieties.' },
+  { crop: 'Any', name: 'Leaf-eating caterpillars / armyworm', sym: ['caterpillar', 'worm', 'worms', 'chewed', 'eaten', 'holes', 'frass', 'droppings'], fix: 'Hand-pick small areas, spray neem or Bt in the evening and scout weekly. Encourage birds and natural enemies.' },
+  { crop: 'Any', name: 'Locusts / grasshoppers', sym: ['locust', 'swarm', 'grasshopper', 'hoppers', 'stripped', 'bare'], fix: 'Report swarms immediately to your local agriculture office. Do not spray alone; authorities coordinate control.' },
+  { crop: 'Any', name: 'Snail and slug damage', sym: ['slime', 'snail', 'snails', 'slug', 'slugs', 'ragged holes', 'trail'], fix: 'Hand-pick at night, use traps (beer or fruit skins), remove hiding places and keep the field clean.' },
+  { crop: 'Any', name: 'Bird damage', sym: ['birds', 'bird', 'pecked', 'grain missing', 'torn', 'quelea'], fix: 'Scare birds with reflective tape and noise, harvest promptly, plant at the same time as neighbours and use nets for high-value crops.' },
+  { crop: 'Any', name: 'Sunscald / heat stress', sym: ['scorched', 'burnt', 'bleached', 'white patches', 'sunburn', 'heat', 'hot', 'wilt midday'], fix: 'Water deeply in the morning, mulch, provide light shade for young plants and avoid transplanting in hot hours.' },
+  { crop: 'Any', name: 'Frost damage', sym: ['frost', 'blackened', 'frozen', 'cold', 'water-soaked', 'limp', 'cold night'], fix: 'Cover plants at night, irrigate before a cold night and plant at recommended times. Remove dead tissue when new growth starts.' },
+  { crop: 'Any', name: 'Drought stress', sym: ['drought', 'dry', 'rolled', 'rolling', 'dry leaves', 'no rain', 'wilting', 'drooping', 'curled'], fix: 'Irrigate deeply, mulch, weed to reduce competition and, next season, use drought-tolerant varieties and rainwater harvesting.' },
+  { crop: 'Any', name: 'Waterlogging', sym: ['flood', 'flooded', 'standing water', 'yellow', 'waterlogged', 'swampy'], fix: 'Open drainage furrows, plant on ridges or raised beds and avoid heavy machinery on wet soil.' },
+  { crop: 'Any', name: 'Salt stress', sym: ['salt', 'white crust', 'burnt tips', 'scorched edges', 'saline', 'crust'], fix: 'Flush soil with good water, improve drainage, add gypsum on sodic soil and use salt-tolerant crops.' },
+  { crop: 'Any', name: 'Herbicide damage', sym: ['twisted', 'curled', 'cupped', 'distorted', 'herbicide', 'weed killer', 'sprayed'], fix: 'Stop spraying near crops, rinse sprayers well and water plants. New growth usually recovers; severely damaged plants may die.' },
+  { crop: 'Any', name: 'Iron / magnesium deficiency', sym: ['yellow between veins', 'interveinal', 'veins green', 'stripes', 'pale young leaves'], fix: 'Check soil pH (too high locks iron), add compost, and spray chelated iron or Epsom salt (magnesium) on leaves.' },
+  { crop: 'Any', name: 'Potassium deficiency', sym: ['edges', 'brown edges', 'scorched edges', 'yellow edges', 'burnt', 'margins'], fix: 'Add potash, wood ash or compost and keep soil moist.' },
+  { crop: 'Any', name: 'Calcium deficiency', sym: ['tip burn', 'tip', 'deformed', 'new leaves', 'cupped', 'brown tips'], fix: 'Add lime or gypsum, water evenly and avoid excess nitrogen or potassium.' },
+  { crop: 'Any', name: 'Mosaic virus (general)', sym: ['mosaic', 'mottled', 'patches', 'light green', 'dark green', 'blistered', 'distorted', 'virus'], fix: 'No cure. Remove infected plants, control aphids and whiteflies, disinfect tools and use clean, resistant seed.' }
+);

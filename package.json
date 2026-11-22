@@ -1,0 +1,7 @@
+{
+  "name": "agriverse-ai",
+  "version": "1.0.0",
+  "description": "AgriVerse AI website with a simple Node.js backend",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" }
+}

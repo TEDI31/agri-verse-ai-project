@@ -1,0 +1,313 @@
+{
+ "users": [
+  {
+   "email": "tedrosmarkos4@gmail.com",
+   "name": "Tedros Markos",
+   "role": "farmer",
+   "salt": "5814c43b1332c82dd100af27e59d12fe",
+   "hash": "f499cc763fccabcd72e11a042608829262cd2cd13d2664982ab50e97b74c82ab",
+   "farm": "",
+   "location": "",
+   "crops": "",
+   "status": ""
+  },
+  {
+   "email": "tedrosdddr@gmail.com",
+   "name": "hana",
+   "role": "buyer",
+   "salt": "5e347a366f117f2d551fc0f8117fca24",
+   "hash": "fa25b4971d56be126c44d7ff08ad06c4d482dd9fdad5f46609ed87ff3aaa769f",
+   "farm": "",
+   "location": "",
+   "crops": "",
+   "status": ""
+  },
+  {
+   "username": "chief_teo",
+   "name": "Tedros Markos",
+   "role": "farmer",
+   "salt": "52d687b5a435fe0be01aa3b935bfe691",
+   "hash": "77ff285678e54ed36087f8dda1647d833976572eb77a46ed09c8c2a3dd727553",
+   "farm": "teos farm",
+   "location": "jimma highways",
+   "crops": "teff,maize, onion",
+   "status": "20 quntals avilable",
+   "suspended": false
+  },
+  {
+   "username": "hana12",
+   "name": "Tedros Markos",
+   "role": "buyer",
+   "salt": "0803d4fca7cdd14700446ec99412dc69",
+   "hash": "dcac3566c85632126d82e1e476ead6a514256b60de0bc720e320ef6f1bb13c7c",
+   "farm": "",
+   "location": "",
+   "crops": "",
+   "status": ""
+  },
+  {
+   "username": "chief_admin",
+   "name": "Administrator",
+   "role": "admin",
+   "salt": "3d2146d3d29ff6fe80f14d526641f77f",
+   "hash": "f9643e6984257218644b34e45c3f89924e4b831b23cca4f1c30b140ffdb63219",
+   "farm": "",
+   "location": "",
+   "crops": "",
+   "status": "",
+   "joined": "2026-11-14"
+  },
+  {
+   "username": "nani_21",
+   "name": "Hana Solomon",
+   "role": "farmer",
+   "salt": "415dd03c3b5698e242df3e4629b97513",
+   "hash": "355b4b01d9d3f32e9d9bf23ee4c3e441da8823c0ccdb019d0614e4835d8a4402",
+   "farm": "",
+   "location": "",
+   "crops": "",
+   "status": "",
+   "joined": "2026-11-18"
+  },
+  {
+   "username": "tt17",
+   "name": "Tedros Markos",
+   "role": "farmer",
+   "salt": "2d6ea1e262c5f61646bbc2802112994f",
+   "hash": "cce71d0e55a91a0fc157de6785c3cdb1ed1dad8f8c3eb150713f6eaa50238675",
+   "farm": "",
+   "location": "",
+   "crops": "",
+   "status": "",
+   "joined": "2026-11-18"
+  },
+  {
+   "username": "setnasolomon",
+   "name": "Setna Solomon",
+   "role": "farmer",
+   "salt": "acfc9726db5e4933c3e3c1a146a8041f",
+   "hash": "38c5cee927eab5fd99814af6649488c890b1b64801725731fc833531b75a6511",
+   "farm": "",
+   "location": "",
+   "crops": "",
+   "status": "",
+   "joined": "2026-11-18"
+  }
+ ],
+ "sessions": {
+  "80d938b29b959c4fdf1b342d343c50e078dcc5ce8f522f4c": "tedrosmarkos4@gmail.com",
+  "94ba46df87f106405fbb8f030d2e0d82232a5dd6c8d3c805": "tedrosmarkos4@gmail.com",
+  "0e6e94f71511ac2f8d1b0845dc17f4bcaece3b84729c391e": "tedrosdddr@gmail.com",
+  "cde046e2b946faec13c671051a704f3aa33b77f85257775e": "hana12",
+  "622beb1ae2bd2ed365a64207c777389380501f2a7b10660f": "hana12",
+  "3dfbe3ba2ab3a3affdd1b791e27d18cd097756252603d3c0": "hana12",
+  "43f3da62926fc5cf63e99b57f577cabea1046e4548630123": "hana12",
+  "c09c31747171aa66d73a9d3fe0a5fe3491777a1a759a62fc": "hana12",
+  "85177be423a2e5d79767c63ff2e75ed12f42d783f85e52fa": "hana12",
+  "cfb19ad24c8b5d651ce1d76b0a235401f4960780854ee0eb": "hana12",
+  "cce41fadd49efa8333572d331ca5bc501379aaabf0998f75": "hana12",
+  "940ef3dbae0a882a87ee8793fa43d03ad705d1e01b2f7eb4": "chief_admin",
+  "7c42b78e5d265efa04397047ceb40a1f21c4a75bf47256ef": "nani_21",
+  "6ab6665a83c2b209bbe3d32cc132ace8073536971fc9453d": "tt17",
+  "927e90b1b3d9c95f80ecd7294302302d2db57fb2f447c51b": "setnasolomon",
+  "959669a0b146339611211eee9812ee24467e778a1933c337": "chief_admin",
+  "dbec0bfea98210431761f6a19e39a0d2f402a6139f4c2c64": "chief_admin",
+  "c87ea478e5a3bca048b389bd20317e645b5b0fc7a00343d5": "chief_admin",
+  "ce43ba7a3bdefce88845482156f814be17dfae70ae0190bb": "chief_admin",
+  "e766aa695a5f173156b5c909d23b728229b5c8c780cdba98": "hana12",
+  "352017cb1c9b862005b76ec20499f929c62bf4731214b0e3": "chief_admin",
+  "2a4bba213927c94da9aabc227785871d9807248bf53305db": "chief_admin",
+  "b72059f293f13b719fe2e545835880a5e048c2a4e6511564": "chief_admin",
+  "605a6a4da2cae18b010062afb40180d695ae584a8dbb2cc2": "chief_admin",
+  "1c653ede5d58a2fb0750fae5fb0a5d784b5990e63f5ffe0a": "chief_admin",
+  "ed0db812d3411334838e6e3fe96011e0ecb3217603f9c32f": "chief_admin",
+  "ed30d767e9a17959dde20cabec3b3f0c1fb0b1b23a83def6": "chief_admin",
+  "13185299ee41a0e8c4af4a69fb7914d14a0a41518da49807": "chief_admin",
+  "c654ab3784d0c50536222cac5ee1d1770b0d958c0dbaa6ae": "chief_admin",
+  "7d3bb1363b525790d2440b63117706c2edecafbd7d380837": "chief_admin",
+  "ca28c4b51a5636a6b006b590af681a03bc85c5011ecc9533": "chief_teo",
+  "861a3a23adbcc4810240048aeb1956d1ff4fa6fbd02cb0d8": "chief_admin"
+ },
+ "products": [
+  {
+   "id": 1794582411596,
+   "username": "chief_teo",
+   "farmerName": "Tedros Markos",
+   "name": "red onion",
+   "qty": 1,
+   "unit": "kg",
+   "price": 90,
+   "loc": "addis Ababa"
+  },
+  {
+   "id": 1794660523183,
+   "username": "chief_teo",
+   "farmerName": "Tedros Markos",
+   "name": "red onion",
+   "qty": 5,
+   "unit": "kg",
+   "price": 90,
+   "loc": "jimma highways"
+  }
+ ],
+ "orders": [
+  {
+   "id": 1794496418885,
+   "productId": 1794496391362,
+   "buyer": "hana12",
+   "buyerName": "Tedros Markos",
+   "farmer": "chief_teo",
+   "farmerName": "Tedros Markos",
+   "name": "red onion",
+   "unit": "kg",
+   "qty": 1,
+   "total": 90,
+   "date": "11/12/2026",
+   "status": "Delivered",
+   "history": {
+    "Pending": "11/12/2026",
+    "Accepted": "11/12/2026",
+    "Delivered": "11/13/2026"
+   },
+   "buyerContact": {
+    "phone": "0945653181",
+    "note": "fgbfkkddc",
+    "date": "11/13/2026"
+   },
+   "rating": {
+    "stars": 5,
+    "comment": "",
+    "date": "11/13/2026"
+   }
+  },
+  {
+   "id": 1794582421582,
+   "productId": 1794496391362,
+   "buyer": "hana12",
+   "buyerName": "Tedros Markos",
+   "farmer": "chief_teo",
+   "farmerName": "Tedros Markos",
+   "name": "red onion",
+   "unit": "kg",
+   "qty": 1,
+   "total": 90,
+   "date": "11/13/2026",
+   "status": "Cancelled",
+   "history": {
+    "Pending": "11/13/2026",
+    "Cancelled": "11/13/2026"
+   }
+  },
+  {
+   "id": 1794582821166,
+   "productId": 1794496391362,
+   "buyer": "hana12",
+   "buyerName": "Tedros Markos",
+   "farmer": "chief_teo",
+   "farmerName": "Tedros Markos",
+   "name": "red onion",
+   "unit": "kg",
+   "qty": 1,
+   "total": 90,
+   "date": "11/13/2026",
+   "status": "Cancelled",
+   "history": {
+    "Pending": "11/13/2026",
+    "Cancelled": "11/13/2026"
+   }
+  },
+  {
+   "id": 1794583411777,
+   "productId": 1794496391362,
+   "buyer": "hana12",
+   "buyerName": "Tedros Markos",
+   "farmer": "chief_teo",
+   "farmerName": "Tedros Markos",
+   "name": "red onion",
+   "unit": "kg",
+   "qty": 1,
+   "total": 90,
+   "date": "11/13/2026",
+   "status": "Cancelled",
+   "history": {
+    "Pending": "11/13/2026",
+    "Cancelled": "11/14/2026"
+   }
+  },
+  {
+   "id": 1794660569989,
+   "productId": 1794660523183,
+   "buyer": "hana12",
+   "buyerName": "Tedros Markos",
+   "farmer": "chief_teo",
+   "farmerName": "Tedros Markos",
+   "name": "red onion",
+   "unit": "kg",
+   "qty": 1,
+   "total": 90,
+   "date": "11/14/2026",
+   "status": "Delivered",
+   "history": {
+    "Pending": "11/14/2026",
+    "Accepted": "11/14/2026",
+    "Delivered": "11/14/2026"
+   },
+   "farmerContact": {
+    "phone": "0945653181",
+    "note": "htgrfmivmfv",
+    "date": "11/14/2026"
+   },
+   "buyerContact": {
+    "phone": "0945653181",
+    "note": "fgbfkkddc",
+    "date": "11/14/2026"
+   },
+   "rating": {
+    "stars": 4,
+    "comment": "good service",
+    "date": "11/14/2026"
+   }
+  }
+ ],
+ "apps": [],
+ "extraDis": [],
+ "offers": [
+  {
+   "id": 1,
+   "email": "",
+   "name": "GreenSeed Fund",
+   "max": 50000,
+   "rate": "8%",
+   "term": "12 months"
+  },
+  {
+   "id": 2,
+   "email": "",
+   "name": "Highland Agri Investors",
+   "max": 150000,
+   "rate": "10%",
+   "term": "18 months"
+  },
+  {
+   "id": 3,
+   "email": "",
+   "name": "Harvest Partners",
+   "max": 300000,
+   "rate": "12%",
+   "term": "24 months"
+  }
+ ],
+ "plantings": [],
+ "audit": [
+  {
+   "date": "2026-11-22 09:52",
+   "admin": "chief_admin",
+   "text": "Suspended chief_teo"
+  },
+  {
+   "date": "2026-11-22 09:53",
+   "admin": "chief_admin",
+   "text": "Reactivated chief_teo"
+  }
+ ]
+}

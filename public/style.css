@@ -1,0 +1,219 @@
+:root{--bg:#06140b;--glass:rgba(12,38,22,.58);--line:rgba(167,201,87,.22);--text:#eaf3e4;--muted:#9db39f;--leaf:#3f9b57;--leaf2:#2e7d46;--sprout:#a7c957;--straw:#e9c46a;--red:#c8503b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Poppins","Segoe UI",system-ui,sans-serif;color:var(--text);line-height:1.6;min-height:100vh;
+  background:radial-gradient(ellipse at 20% 0%,#12361f 0%,var(--bg) 55%,#030a06 100%) fixed}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1;
+  background:
+    linear-gradient(180deg, rgba(6,20,11,.55) 0%, rgba(6,20,11,.35) 45%, rgba(3,10,6,.85) 100%),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Countryside_mountain_%28Unsplash%29.jpg?width=1920") center 65%/cover no-repeat;
+  animation: bgzoom 40s ease-in-out infinite alternate;
+  transform-origin: center 65%;
+}
+@keyframes bgzoom{from{transform:scale(1)}to{transform:scale(1.12)}}
+@media (prefers-reduced-motion: reduce){#bg{animation:none}}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0 0 .6rem;letter-spacing:.2px}
+h1 span{color:var(--straw)}
+[hidden]{display:none!important}
+::selection{background:var(--leaf);color:#fff}
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:rgba(167,201,87,.35);border-radius:8px}
+
+/* inputs */
+input,select,textarea,button{font:inherit}
+input,select,textarea{width:100%;padding:.75rem .95rem;margin:.3rem 0 .9rem;color:var(--text);background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:12px;transition:border-color .25s,box-shadow .25s,background .25s}
+input::placeholder,textarea::placeholder{color:var(--muted)}
+select option{background:#0c2616;color:var(--text)}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--sprout);background:rgba(255,255,255,.11);box-shadow:0 0 0 4px rgba(167,201,87,.18)}
+label{font-size:.85rem;color:var(--muted)}
+
+/* buttons */
+button{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--leaf),var(--leaf2));color:#fff;border:0;border-radius:12px;padding:.75rem 1.3rem;cursor:pointer;font-weight:600;box-shadow:0 8px 20px rgba(46,125,70,.35);transition:transform .25s,box-shadow .25s,filter .25s}
+button::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .6s}
+button:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(46,125,70,.5)}
+button:hover::after{left:140%}
+button:active{transform:scale(.97)}
+button:focus-visible{outline:3px solid var(--sprout);outline-offset:2px}
+button.ghost{background:transparent;border:1px solid var(--line);color:var(--sprout);box-shadow:none}
+button.ghost:hover{background:rgba(167,201,87,.12)}
+button.small{padding:.4rem .8rem;font-size:.82rem}
+button.danger{background:linear-gradient(135deg,#c8503b,#9b3a28);box-shadow:0 8px 20px rgba(200,80,59,.3)}
+
+/* login */
+#auth{min-height:100vh;display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:3rem;padding:2rem 4vw}
+.intro{max-width:34rem;justify-self:center}
+.intro h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.05;background:linear-gradient(90deg,#fff,var(--sprout),var(--straw),#fff);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 7s linear infinite}
+.intro h1 span{-webkit-text-fill-color:transparent}
+.intro p{font-size:1.15rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.chips span{padding:.4rem .95rem;border:1px solid var(--line);border-radius:30px;background:var(--glass);backdrop-filter:blur(8px);font-size:.85rem;animation:float 5s ease-in-out infinite}
+.chips span:nth-child(2){animation-delay:.6s}.chips span:nth-child(3){animation-delay:1.2s}.chips span:nth-child(4){animation-delay:1.8s}
+#authForm{background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);padding:2.2rem;border-radius:22px;max-width:27rem;width:100%;justify-self:center;box-shadow:0 30px 70px rgba(0,0,0,.45);animation:pop .8s cubic-bezier(.2,.8,.2,1) backwards}
+.roles{display:flex;gap:.5rem;margin-bottom:1.1rem;flex-wrap:wrap}
+.roles label{flex:1 1 42%}
+.roles input{display:none}
+.roles span{display:block;text-align:center;padding:.55rem .4rem;border:1px solid var(--line);border-radius:12px;cursor:pointer;font-size:.85rem;color:var(--muted);transition:all .25s}
+.roles span:hover{border-color:var(--sprout);color:var(--text)}
+.roles input:checked+span{background:linear-gradient(135deg,var(--leaf),var(--leaf2));border-color:transparent;color:#fff;box-shadow:0 6px 16px rgba(46,125,70,.4)}
+#msg{min-height:1.4rem;margin:0 0 .6rem;color:#ff9d8a;font-weight:500;font-size:.9rem}
+#msg.ok{color:var(--sprout)}
+#authForm button{width:100%}
+#authForm a{display:block;text-align:center;margin-top:1.1rem;color:var(--sprout);text-decoration:none;font-size:.92rem}
+#authForm a:hover{text-decoration:underline}
+
+/* dashboard */
+#app{display:flex;min-height:100vh;animation:fade .7s ease}
+aside{width:250px;margin:1rem;padding:1.4rem;border-radius:22px;background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line);display:flex;flex-direction:column;gap:.9rem;position:sticky;top:1rem;height:calc(100vh - 2rem);animation:slideIn .8s cubic-bezier(.2,.8,.2,1) backwards}
+aside h1{font-size:1.5rem}
+aside p{margin:0;color:var(--sprout);font-size:.88rem}
+nav{display:flex;flex-direction:column;gap:.35rem;flex:1}
+nav button{background:transparent;box-shadow:none;text-align:left;color:var(--muted);font-weight:500;border-radius:12px}
+nav button::after{display:none}
+nav button:hover{background:rgba(167,201,87,.1);color:var(--text);transform:translateX(4px);box-shadow:none}
+nav button.on{background:linear-gradient(135deg,var(--leaf),var(--leaf2));color:#fff;box-shadow:0 6px 16px rgba(46,125,70,.4)}
+main{flex:1;padding:2rem 1.6rem;max-width:1050px;min-width:0}
+main h2{font-size:2rem}
+main h3{margin-top:1.4rem;color:var(--straw)}
+
+/* content */
+.card{background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;padding:1.3rem;margin-bottom:1rem;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-5px);border-color:rgba(167,201,87,.55);box-shadow:0 20px 44px rgba(0,0,0,.4)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.grid>.card{margin-bottom:0}
+.price{font-size:1.35rem;font-weight:700;color:var(--sprout)}
+.note{color:var(--muted);font-size:.88rem}
+code{background:rgba(255,255,255,.1);padding:.1rem .4rem;border-radius:6px;font-size:.85rem;word-break:break-word}
+.tag{display:inline-block;background:rgba(233,196,106,.18);color:var(--straw);border:1px solid rgba(233,196,106,.4);padding:.1rem .65rem;border-radius:30px;font-size:.78rem;font-weight:600}
+.row{display:flex;gap:.6rem}
+.row input{margin-bottom:0}
+.log{height:400px;overflow-y:auto;background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:18px;padding:1.1rem;margin-bottom:.9rem}
+.msg{max-width:85%;padding:.7rem 1rem;border-radius:16px;margin-bottom:.7rem;white-space:pre-wrap;animation:pop .35s ease backwards}
+.msg.bot{background:rgba(255,255,255,.09);border-bottom-left-radius:4px}
+.msg.user{background:linear-gradient(135deg,var(--leaf),var(--leaf2));margin-left:auto;border-bottom-right-radius:4px}
+#pv{max-width:200px;border-radius:12px;display:block;margin-bottom:.9rem}
+.scroll{overflow-x:auto;border-radius:16px;border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;background:var(--glass);font-size:.9rem}
+th{color:var(--sprout);font-weight:600}
+th,td{padding:.7rem .8rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+tr:last-child td{border-bottom:0}
+tr:hover td{background:rgba(255,255,255,.04)}
+
+/* animations */
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(14px)}}
+@keyframes fade{from{opacity:0}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-30px)}}
+@keyframes float{50%{transform:translateY(-7px)}}
+@keyframes shine{to{background-position:-250% 0}}
+#view>*,.grid>.card{animation:rise .65s cubic-bezier(.2,.8,.2,1) backwards}
+#view>:nth-child(2){animation-delay:.07s}#view>:nth-child(3){animation-delay:.14s}#view>:nth-child(4){animation-delay:.21s}#view>:nth-child(5){animation-delay:.28s}#view>:nth-child(n+6){animation-delay:.35s}
+.grid>.card:nth-child(2){animation-delay:.07s}.grid>.card:nth-child(3){animation-delay:.14s}.grid>.card:nth-child(4){animation-delay:.21s}.grid>.card:nth-child(5){animation-delay:.28s}.grid>.card:nth-child(n+6){animation-delay:.35s}
+
+@media(max-width:820px){
+  #auth{grid-template-columns:1fr;gap:1.6rem;padding:1.4rem}
+  .intro{text-align:center}.chips{justify-content:center}
+  #app{flex-direction:column}
+  aside{width:auto;height:auto;position:static;margin:.8rem}
+  nav{flex-direction:row;flex-wrap:wrap}
+  main{padding:1rem}
+  .card:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* order status */
+.st{display:inline-block;padding:.1rem .65rem;border-radius:30px;font-size:.78rem;font-weight:600;border:1px solid var(--line)}
+.st-declined,.st-cancelled{color:#f0a090;background:rgba(200,80,59,.15);border-color:rgba(200,80,59,.4)}
+.track{display:flex;gap:.3rem;flex-wrap:wrap}
+.track span{padding:.1rem .6rem;border-radius:30px;font-size:.74rem;font-weight:600;color:var(--muted);border:1px solid var(--line)}
+.track span.done{color:#06140b;background:var(--sprout);border-color:var(--sprout)}
+.cinfo{margin:0 0 .4rem;font-size:.85rem}
+.cform{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:.8rem 1rem}
+.cform h3{margin:.1rem 0 .6rem;font-size:1rem}
+.flink{color:var(--sprout);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.flink:hover{color:var(--straw)}
+.stars{color:var(--straw);letter-spacing:.1rem;white-space:nowrap}
+.rate{font-size:1.1rem;margin-bottom:.5rem}
+
+/* planting calendar */
+.badge{margin-left:.5rem;background:#c8503b;color:#fff;border-radius:30px;padding:0 .5rem;font-size:.72rem;font-weight:700}
+.chip{background:rgba(167,201,87,.15);border:1px solid rgba(167,201,87,.5);color:var(--sprout);box-shadow:none;padding:.35rem .9rem;border-radius:30px;font-size:.85rem;margin:0 .3rem .4rem 0}
+.chip:hover{background:rgba(167,201,87,.3)}
+.tasks{list-style:none;margin:.6rem 0;padding:0}
+.task{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem;padding:.5rem 0;border-bottom:1px solid var(--line)}
+.task .td{min-width:7.5rem;font-size:.85rem;color:var(--muted)}
+.task .tt{flex:1;min-width:10rem}
+.task.done .tt{text-decoration:line-through;opacity:.55}
+.task .late{color:#f0a090;font-weight:600;font-size:.85rem}
+.task .soon{color:var(--straw);font-weight:600;font-size:.85rem}
+.task .later{color:var(--muted);font-size:.85rem}
+.task .ok{color:var(--sprout);font-size:.85rem}
+.remind{border-color:rgba(232,200,100,.6)}
+.bar{height:10px;border-radius:10px;background:rgba(255,255,255,.1);overflow:hidden;margin:.5rem 0 .2rem}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--leaf),var(--sprout));border-radius:10px}
+table.glance th,table.glance td{padding:.35rem .4rem;text-align:center;font-size:.78rem}
+table.glance th:first-child{text-align:left;font-weight:500}
+table.glance th.mine{font-weight:800;color:var(--sprout)}
+table.glance td{min-width:2rem;border:1px solid rgba(255,255,255,.06)}
+table.glance td.pl,.key.pl{background:var(--sprout)}
+table.glance td.hv,.key.hv{background:var(--straw)}
+table.glance .now{box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+.key{display:inline-block;width:.9rem;height:.9rem;border-radius:3px;vertical-align:middle}
+
+/* long menus scroll; Log out stays visible */
+nav{overflow-y:auto;min-height:0;scrollbar-width:thin;padding-right:.2rem}
+nav button{flex-shrink:0;padding-top:.6rem;padding-bottom:.6rem}
+aside>button{flex-shrink:0}
+
+/* ===== draw your farm ===== */
+.farmbar{display:flex;flex-wrap:wrap;gap:.6rem;margin:.4rem 0 .8rem}
+.farmbar button{padding:.6rem 1.1rem}
+.farmread{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 2.2rem;padding:.9rem 1.2rem}
+.farmread .lbl{font-size:.8rem;color:var(--muted)}
+.farmread .big{font-family:"Playfair Display",Georgia,serif;font-size:2rem;color:var(--straw);line-height:1.1}
+.farmread .state{margin-left:auto;font-size:.85rem;color:var(--sprout)}
+.farmmsg{min-height:1.4em;color:var(--straw)}
+.farmsize{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1rem;margin:.3rem 0 .9rem}
+.farmsize b{font-size:1.4rem;color:var(--straw)}
+.farm-pt{background:#fff;border:3px solid #ffd54a;border-radius:50%;box-shadow:0 0 0 2px rgba(0,0,0,.5);cursor:grab}
+.farm-pt.first{background:#ffd54a;border-color:#fff}
+.farm-tip{background:rgba(0,0,0,.7);border:0;color:#fff;font-weight:600;box-shadow:none}
+.farm-tip:before{display:none}
+#leafmap.drawing{cursor:crosshair}
+button:disabled{opacity:.45;cursor:not-allowed;filter:grayscale(.4);transform:none;box-shadow:none}
+
+/* admin dashboard */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.8rem;margin:1rem 0}
+.stat{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:.9rem 1rem}
+.stat .lbl{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.stat .num{font-size:1.5rem;font-weight:700;color:var(--sprout);margin:.15rem 0}
+.adm-row{display:grid;grid-template-columns:9rem 1fr 2.5rem;gap:.6rem;align-items:center;margin:.4rem 0;font-size:.9rem}
+.adm-row .bar{margin:0}
+.adm-row b{text-align:right}
+.roles label[hidden]{display:none}
+/* ===== login screen layout fix =====
+   - keeps room at the top so the language bar never sits on the login card
+   - compact card that fits a normal 100% browser window without zooming out
+   - install button moves to the left so it never covers the card */
+#auth{box-sizing:border-box;min-height:100vh;min-height:100dvh;padding:5rem 4vw 2rem}
+#authForm{padding:1.6rem 1.9rem;max-width:26rem}
+#authForm h2{margin-bottom:.6rem}
+#authForm input{margin:.25rem 0 .6rem;padding:.65rem .95rem}
+.roles{gap:.4rem;margin-bottom:.8rem}
+.roles span{padding:.45rem .4rem;font-size:.82rem}
+#msg{min-height:1.1rem;margin:0 0 .5rem}
+#authForm button{padding:.7rem 1rem}
+#authForm a{margin-top:.8rem}
+body .lang-btn{top:12px;right:12px}
+body .lang-btn button{padding:.3rem .8rem;font-size:.8rem}
+body:has(#auth:not([hidden])) #installBtn{right:auto;left:14px}
+
+@media (max-height:860px){
+  #auth{padding-top:4.4rem;padding-bottom:1rem}
+  #authForm{padding:1.3rem 1.7rem}
+  #authForm input{padding:.55rem .9rem;margin:.2rem 0 .45rem}
+  .roles span{padding:.38rem .4rem}
+  .intro h1{font-size:clamp(2.4rem,5vw,3.8rem)}
+}
+@media (max-width:820px){
+  #auth{padding:4.6rem 1.2rem 1.6rem}
+  body:has(#auth:not([hidden])) #installBtn{left:auto;right:14px}
+}

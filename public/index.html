@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgriVerse AI</title>
+<meta name="theme-color" content="#2e7d46">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="AgriVerse">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lessons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+</head>
+<body>
+
+<div id="bg" aria-hidden="true"></div>
+
+<section id="auth">
+  <div class="intro">
+    <h1>AgriVerse <span>AI</span></h1>
+    <p>The smart farming platform for farmers, buyers and data scientists.</p>
+    <div class="chips">
+      <span>AI Farming Assistant</span>
+      <span>Disease Detection</span>
+      <span>Local Marketplace</span>
+      <span>Credit &amp; Insurance</span>
+    </div>
+  </div>
+  <form id="authForm" onsubmit="return doAuth(event)">
+    <h2 id="authTitle">Log in</h2>
+    <div class="roles">
+      <label><input type="radio" name="role" value="farmer" checked><span>Farmer</span></label>
+      <label><input type="radio" name="role" value="buyer"><span>Buyer</span></label>
+      <label><input type="radio" name="role" value="scientist"><span>Data scientist</span></label>
+            <label><input type="radio" name="role" value="investor"><span>Credit &amp; Insurance</span></label>
+    </div>
+    <input id="name" placeholder="Full name" hidden>
+    <input id="username" type="text" placeholder="Username" minlength="3" maxlength="20" pattern="[a-zA-Z0-9_]+" autocomplete="username" required>
+    <input id="pw" type="password" placeholder="Password (6+ characters)" minlength="6" required>
+    <p id="msg" role="alert"></p>
+    <button id="authBtn">Log in</button>
+    <a href="#" id="authSwitch" onclick="return toggleMode()">New here? Create an account</a>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <aside>
+    <h1>AgriVerse <span>AI</span></h1>
+    <p id="who"></p>
+    <nav id="nav"></nav>
+    <button class="ghost" onclick="logout()">Log out</button>
+  </aside>
+  <main id="view"></main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+<script src="knowledge.js"></script>
+<script src="diseases.js"></script>
+<script src="investor.js"></script>
+<script src="lessons.js"></script>
+<script src="lang-am.js"></script>
+<script src="lang-ti.js"></script>
+<script src="lang-ti-content.js"></script>
+<script src="lang-om.js"></script>
+<script src="i18n.js"></script>
+<script src="pwa.js"></script>
